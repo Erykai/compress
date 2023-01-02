@@ -27,7 +27,6 @@ Compress img .jpg, .gif, .png and more
 ```php
 use Erykai\Compress\Compress;
 
-require "config.php";
 require "vendor/autoload.php";
 
 (new Compress(__DIR__ . "/storage/", "file.jpg", 25))->img()->send();
@@ -37,7 +36,6 @@ Compress pdf
 ```php
 use Erykai\Compress\Compress;
 
-require "config.php";
 require "vendor/autoload.php";
 
 (new Compress(__DIR__ . "/storage/", "file.pdf", 25))->pdf()->send();
