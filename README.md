@@ -8,10 +8,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/erykai/compress.svg?style=flat-square)](https://scrutinizer-ci.com/g/erykai/compress)
 [![Total Downloads](https://img.shields.io/packagist/dt/erykai/compress.svg?style=flat-square)](https://packagist.org/packages/erykai/compress)
 
-Reduce the size of images, pdf and videos
-
-[![Video Documentation](https://i.ytimg.com/an_webp/DwYiZ0GGHSg/mqdefault_6s.webp?du=3000&sqp=CKC21JsG&rs=AOn4CLCEuuYnC2lrokRUCx_diIAvBfd-Bg)](https://youtu.be/DwYiZ0GGHSg)
-
+Reduce the size of images, pdf, audio and videos
 
 ## Installation
 
@@ -25,6 +22,25 @@ Terminal
 
 ```bash
 composer require erykai/compress
+```
+Compress img .jpg, .gif, .png and more
+```php
+use Erykai\Compress\Compress;
+
+require "config.php";
+require "vendor/autoload.php";
+
+(new Compress(__DIR__ . "/storage/", "file.jpg", 25))->img()->send();
+```
+
+Compress pdf
+```php
+use Erykai\Compress\Compress;
+
+require "config.php";
+require "vendor/autoload.php";
+
+(new Compress(__DIR__ . "/storage/", "file.pdf", 25))->pdf()->send();
 ```
 
 ## Contribution
