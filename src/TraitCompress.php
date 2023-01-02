@@ -2,7 +2,7 @@
 
 namespace Erykai\Compress;
 
-use http\Exception\RuntimeException;
+use ErrorException;
 use Imagick;
 use ImagickException;
 
@@ -69,6 +69,7 @@ trait TraitCompress
 
     /**
      * @param string $path
+     * @throws ErrorException
      */
     protected function createDir(string $path): void
     {
@@ -77,7 +78,7 @@ trait TraitCompress
         foreach ($folders as $folder) {
             $dir .= "/" . $folder;
             if (!file_exists($dir) && !mkdir($dir) && !is_dir($dir)) {
-                throw new RuntimeException(sprintf('Directory "%s" was not created', $dir));
+                throw new ErrorException(sprintf('Directory "%s" was not created', $dir));
             }
         }
     }

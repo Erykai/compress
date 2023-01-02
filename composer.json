@@ -18,7 +18,6 @@
     "PHP": ">=8.0",
     "ext-fileinfo": "*",
     "ext-imagick": "*",
-    "ext-gd": "*",
-    "ext-http": "*"
+    "ext-gd": "*"
   }
 }
